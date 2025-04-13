@@ -24,23 +24,20 @@ return {
     "github/copilot.vim",
   },
   {
-    "nvim-telescope/telescope.nvim",
-    dependencies = {
-      {
-        "nvim-telescope/telescope-live-grep-args.nvim",
+   "nvim-telescope/telescope.nvim",
+     dependencies = {
+       {
+         "nvim-telescope/telescope-live-grep-args.nvim",
+           event = "VeryLazy",
+           config = function(_, _)
+             require("lazyvim.util").on_load("telescope.nvim", function()
+             require("telescope").load_extension("live_grep_args")
+             end)
+           end,
+          keys = {
+            { "<leader>/", ":Telescope live_grep_args<CR>", desc = "Live Grep" },
+          },
+        },
       },
     },
-    keys = {
-      {
-        "<leader>/",
-        "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
-        desc = "Grep (root dir)",
-      },
-    },
-    config = function(_, opts)
-      local tele = require("telescope")
-      tele.setup(opts)
-      tele.load_extension("live_grep_args")
-    end,
-  },
 }
