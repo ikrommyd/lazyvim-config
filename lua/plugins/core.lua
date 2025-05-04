@@ -35,7 +35,7 @@ return {
              end)
            end,
           keys = {
-            { "<leader>/", ":Telescope live_grep_args<CR>", desc = "Live Grep" },
+            { "<leader>sA", ":Telescope live_grep_args<CR>", desc = "Live Grep" },
           },
         },
       },
