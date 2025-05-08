@@ -7,3 +7,5 @@ vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+vim.opt.clipboard = ""
