@@ -10,7 +10,7 @@ return {
         comments = { italic = false },
         keywords = { italic = false },
         sidebars = "dark",
-        floats = "dask",
+        floats = "dark",
       },
     },
   },
