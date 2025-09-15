@@ -1,25 +1,18 @@
 return {
   {
-    "Tsuzat/NeoSolarized.nvim",
-    lazy = false,
+    "folke/tokyonight.nvim",
+    lazy = true,
     opts = {
-      style = "dark",
-      transparent = true,
-      enable_italics = false,
+      style = "moon",
+      transparent = false,
+      terminal_colors = true,
       styles = {
-        string = { italic = false },
-        keywords = { italic = false },
-        variable = { italic = false },
-        variables = { italic = false },
         comments = { italic = false },
-        functions = { italic = false },
+        keywords = { italic = false },
+        sidebars = "dark",
+        floats = "dark",
       },
     },
-    config = function(_, opts)
-      vim.o.termguicolors = true
-      require("NeoSolarized").setup(opts)
-      vim.cmd.colorscheme("NeoSolarized")
-    end,
   },
   {
     "snacks.nvim",
