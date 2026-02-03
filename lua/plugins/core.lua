@@ -22,9 +22,9 @@ return {
   },
   {
     "github/copilot.vim",
-    init = function()
-      vim.g.copilot_enabled = false
-    end,
+    -- init = function()
+    --   vim.g.copilot_enabled = false
+    -- end,
   },
   {
    "nvim-telescope/telescope.nvim",
@@ -47,6 +47,27 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       inlay_hints = { enabled = false },
+    },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      indent = { enable = true },
+      ensure_installed = {
+        "bash",
+        "c",
+        "cpp",
+        "python",
+        "lua",
+        "rust",
+        "json",
+        "yaml",
+        "toml",
+        "markdown",
+        "markdown_inline",
+        "vim",
+        "vimdoc",
+      },
     },
   },
 }
