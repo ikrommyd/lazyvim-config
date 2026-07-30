@@ -18,5 +18,7 @@ vim.opt.expandtab = true
 vim.filetype.add({
   pattern = {
     [".*%.c%.src"] = "c",
+    [".*%.h%.src"] = "c",
+    [".*%.inc%.src"] = "c",
   },
 })
